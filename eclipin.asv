@@ -1,0 +1,6 @@
+function [ c ] = eclipin( i,j,a,b,c,d,e )
+%ECLIPIN Summary of this function goes here
+%   Detailed explanation goes here
+     c=
+
+end

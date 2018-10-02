@@ -1,0 +1,15 @@
+	x=[1,2,3,4,6,5]';
+    y=[-1,-2,6,-7,5,12]';
+    A=[x.*x,y.*y,x,y];
+        b=-ones(length(x),1);
+        Solution=A\b;
+        a=Solution(1);
+        b=0;
+        c=Solution(2);
+        d=Solution(3);
+        e=Solution(4);
+        XC=(b*e-2*c*d)/(4*a*c-b*b);
+        YC=(b*d-2*a*e)/(4*a*c-b*b);
+        longaix=sqrt(2*(a*XC*XC+c*YC*YC+b*YC*XC-1)/(a+c-sqrt((a-c)^2+b^2)));
+        top=XC+longaix;
+        bottom=XC-longaix;
